@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+
+</body>
+<script>
+    function maxFraction(numerator,denominator) {
+         let result = []
+        for (let i = 0; i < numerator.length ; i++) {
+             result[i] = numerator[i] / denominator[i];
+        }
+        let max = result[0];
+        for (let i = 0;i < numerator.length;i++){
+            if(max < result[i]){
+                max = result[i]
+            }
+
+        }
+        document.write("Chỉ số của phần tử là :" + result.indexOf(max) + "<br>" + "Phần tử lớn nhất là :" + max) ;
+        return result;
+    }
+    let a = [];
+    let b = [];
+    let n = +prompt("Nhập độ dài của mảng");
+    for (let i = 0; i < n ; i++){
+         a[i] = +prompt("Nhập phần tử mảng thứ nhất");
+
+     }
+    for (let i = 0;i < n;i++){
+         b[i] = +prompt("Nhập phần tử mảng thứ hai");
+    }
+    maxFraction(a,b)
+
+
+
+
+
+
+</script>
+</html>

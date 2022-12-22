@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+
+</body>
+<script>
+
+    function showMissingValue()
+    {
+        let arrA = [];
+        let arrB = [];
+        let arrC = [];
+        let nA = +prompt ("Nhập độ lớn của mảng A");
+        let nB = +prompt ("Nhập độ lớn của mảng B");
+
+        for (let i = 0; i < nA; i++)
+        {
+            arrA[i] = +prompt ("Nhập giá trị phần tử thứ " + i + " của mảng A");
+
+        };
+
+        for (let j = 0; j < nB; j++)
+        {
+            arrB[j] = +prompt ("Nhập giá trị phần tử thứ " + j + " của mảng B");
+
+            if (!arrA.includes(arrB[j])) {
+                arrC.push(arrB[j]);
+            }
+        };
+
+        arrC.sort((a, b) => a - b);
+
+        document.write("Mảng A : " + arrA)
+        document.write("Mảng B : " + arrB)
+        document.write("Mảng C : " + arrC)
+    };
+    showMissingValue();
+
+
+
+
+
+</script>
+</html>
