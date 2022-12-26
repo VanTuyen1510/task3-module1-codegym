@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+<table>
+    <tr>
+        <td>
+            <label for="drink1">Cafe</label>
+            <input type="number" id="cafe" onclick="drink1()">
+            <p id="drink1"></p>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <label for="drink1">Nước lọc</label>
+            <input type="number" id="nuocloc" onclick="drink2()">
+            <p id="drink2"></p>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <label for="drink1">Nước ép cà chua</label>
+            <input type="number" id="nuocepcachua" onclick="drink3()">
+            <p id="drink3"></p>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <label for="drink1">Nước ép cà rốt</label>
+
+            <input type="number" id="nuocepcarot" onclick="drink3()">
+            <p id="drink4"></p>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <label for="drink1">Nước dua</label>
+
+            <input type="number" id="nuocdua" onclick="drink3()">
+            <p id="drink5"></p>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <label for="drink1">Cam vắt</label>
+
+            <input type="number" id="camvat" onclick="drink3()">
+            <p id="drink6"></p>
+        </td>
+    </tr>
+
+    <tr>
+        <td>
+            <button type="button" onclick="sumMoney()">Tính tiền</button>
+            <p id="sum1"></p>
+        </td>
+    </tr>
+
+</table>
+</body>
+<script>
+    function drink1() {
+       let drink1 = document.getElementById("cafe").value ;
+       let result = drink1 * 10000;
+        document.getElementById("drink1").innerHTML = result;
+        return result;
+
+    }
+    function drink2() {
+        let drink2 = document.getElementById("nuocloc").value ;
+        let result2 = drink2 * 8000;
+        document.getElementById("drink2").innerHTML = result2;
+        return result2;
+    }
+    function drink3() {
+        let drink3 = document.getElementById("nuocepcachua").value ;
+        let result3 = drink3 * 15000;
+        document.getElementById("drink3").innerHTML = result3;
+        return result3;
+    }
+    function drink4() {
+        let drink4 = document.getElementById("nuocepcarot").value ;
+        let result4 = drink4 * 15000;
+        document.getElementById("drink4").innerHTML = result4;
+        return result4;
+    }
+    function drink5() {
+        let drink5 = document.getElementById("nuocdua").value ;
+        let result5 = drink5 * 15000;
+        document.getElementById("drink5").innerHTML = result5;
+        return result5;
+    }
+    function drink6() {
+        let drink6 = document.getElementById("camvat").value ;
+        let result6 = drink6 * 15000;
+        document.getElementById("drink6").innerHTML = result6;
+        return result6;
+    }
+
+    function sumMoney() {
+      let sum = drink1() + drink2() +drink3()+drink4()+drink5()+drink6()
+        document.getElementById("sum1").innerHTML = sum;
+
+    }
+
+
+
+
+
+</script>
+</html>
